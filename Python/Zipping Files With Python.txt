@@ -1,0 +1,13 @@
+Python has library for (almost) every tool/format imaginable. So, let’s first take a look at each of them and see why you might want to use them:
+
+zlib is a library and Python module that provides code for working with Deflate compression and decompression format which is used by zip, gzip and many others. So, by using this Python module, you're essentially using gzip compatible compression algorithm without the convenient wrapper. More about this library can be found on Wikipedia.
+
+bz2 is a module that provides support for bzip2 compression. This algorithm is generally more effective than the deflate method, but might be slower. It also works only on individual files and therefore can't create archives.
+
+lzma is both name of the algorithm and Python module. It can produce higher compression ratio than some older methods and is the algorithm behind the xz utility (more specifically LZMA2). gzip is a utility most of us are familiar with. It's also a name of a Python module. This module uses the already mentioned zlib compression algorithm and serves as an interface similar to the gzip and gunzip utilities.
+
+shutils is a module we generally don't associate with compression and decompression, but it provides utility methods for working with archives and can be a convenient way for producing tar, gztar, zip, bztar or xztar archives.
+
+zipfile - as the name suggests - allows us to work with zip archives in Python. This module provides all the expected methods for creating, reading, writing or appending to ZIP files as well as classes and objects for easier manipulation of such files.
+
+tarfile - as with zipfile above, you can probably guess that this module is used for working with tar archives. It can read and write gzip, bz2 and lzma files or archives. It also has support for other features we know from tar utility - list of those is available at the top of above linked docs page.
